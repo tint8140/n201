@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 2</title>
+  </head>
+  <body>
+    <div style="text-align: center; background-color: blue">
+      <img
+        id="question"
+        height="105"
+        width="105"
+        src="images/Icons-Gray_question.png"
+      />
+      <p>
+        <input
+          type="button"
+          value="Enlarge"
+          onclick="document.getElementById('question').height=
+  2*document.getElementById('question').height;
+  document.getElementById('question').width=
+  2*document.getElementById('question').width;"
+        />
+        <input
+          type="button"
+          value="Shrink"
+          onclick="document.getElementById('question').height=
+  0.5*document.getElementById('question').height;
+  document.getElementById('question').width=
+  0.5*document.getElementById('question').width;"
+        />
+      </p>
+    </div>
+  </body>
+</html>

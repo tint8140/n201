@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 6</title>
+
+    <!-- <script type="text/javascript" src="arrays.js"></script> -->
+   <script type="text/javascript">
+
+   
+     function show()
+     {
+        var names=["MADE", "Love Yourself", "Tempo", "Chain" ];
+        var prices=["$60.00", "$100.00", "$80.00", "$40.00"];
+        var selection= document.getElementById('myselect').value;
+
+        if (selection ==1) {
+            document.getElementById("name").innerHTML= names[0];
+            document.getElementById("price").innerHTML= prices[0];
+            document.getElementById("outputDiv").innerHTML= "<img src=\"images/big bang.png\" alt=\"Big Bang\" width=\"150\" height=\"200\">";
+
+        } else if (selection ==2) {
+            document.getElementById("name").innerHTML= names[1];
+            document.getElementById("price").innerHTML= prices[1];
+            document.getElementById("outputDiv").innerHTML= "<img src=\"images/bts.jpg\" alt=\"BTS\" width=\"150\" height=\"200\">";
+        }
+        else if (selection ==3) {
+            document.getElementById("name").innerHTML= names[2];
+            document.getElementById("price").innerHTML= prices[2];
+            document.getElementById("outputDiv").innerHTML= "<img src=\"images/exo.jpg\" alt=\"EXOS\" width=\"150\" height=\"200\">";
+        }
+        else if (selection ==4) {
+            document.getElementById("name").innerHTML= names[3];
+            document.getElementById("price").innerHTML= prices[3];
+            document.getElementById("outputDiv").innerHTML= "<img src=\"images/nct.jpg\" alt=\"NCT\" width=\"150\" height=\"200\">";
+        } else {
+            document.getElementById("outputDiv").innerHTML= "Error Occurs";
+
+        }
+    
+    }
+
+     function ShowAvg()
+     {
+
+        var prices=[60, 100, 80, 40];
+        var average= (prices[0]+prices[1]+ prices[2] + prices[3])/4; 
+
+       document.getElementById('description').innerHTML = 
+           'The average of price is ' + average + '.'; 
+     }
+
+   </script>
+</head>
+<body>
+
+    <h1>Here are the top 4 Kpop boy bands in Korea</h1>
+    
+        <select id="myselect">
+            <option value="1">Big Bang</option>
+            <option value="2">BTS</option>
+            <option value="3">EXO</option>
+            <option value="4">NCT</option>
+          </select>
+
+    <input type="button" value="Show Picture" onclick= "show()" >
+    <input type="button" value="Compute the Average" onclick="ShowAvg();">
+    <div id="outputDiv"></div>
+
+
+    <div>
+        Name: <p id="name"> </p>
+        Price: <p id="price"> </p>
+    </div>
+    <div id="description"></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+ <head>
+   <title> Odd Number Generator </title>
+   <script type="text/javascript" src="http://balance3e.com/random.js">
+   </script>
+   <script type="text/javascript">
+     function GenerateOdd(){
+              
+       var totalRolls = parseFloat(document.getElementById('repsBox').value);
+      // INITIALIZE THE COUNTERS
+      for (i=0; i<=totalRolls; i++) {
+          if(i % 2 !== 0){
+              odd= i + "<br>";
+            // document.write ( i + "<br>");
+            document.getElementById('outputDiv').innerHTML = 
+           document.getElementById('outputDiv').innerHTML+ odd;
+          }       
+     }
+     document.getElementById('outputDiv').innerHTML = 
+         document.getElementById('outputDiv').innerHTML + "Put valid numbers!!" + "<br>"; 
+    }
+
+   </script>
+ </head>
+
+ <body>
+   <h2>Odd Number Generator</h2>
+   <p>
+     Please enter a number between 1 and 10 and I will generate all the odd numbers between 1 and your entry. 
+
+    <br>
+     <input type="text" id="repsBox" size=6 value="10" >
+   </p>
+   <input type="button" value="Generate Odd Numbers" onclick="GenerateOdd();"> 
+
+   <hr>
+   <div id="outputDiv"></div>
+ </body>
+</html>
